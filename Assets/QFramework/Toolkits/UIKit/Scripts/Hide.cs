@@ -33,7 +33,7 @@ namespace QFramework
 	{
 		private void Awake()
 		{
-			this.gameObject.SetActive(false);
+			// this.gameObject.SetActive(false);
 		}
 	}
 }
