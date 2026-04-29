@@ -24,7 +24,7 @@ namespace ProjectSurvivor{
             HurtBox.OnTriggerEnter2DEvent(collider2D => {
                 "Player Hurt".LogInfo();
 
-                ResKit.Init();
+                // ResKit.Init();
                 
                 this.DestroyGameObjGracefully();
 
