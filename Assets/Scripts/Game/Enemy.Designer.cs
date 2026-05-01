@@ -1,4 +1,4 @@
-// Generate Id:067894ef-05ba-4517-b74b-b1b2aa243006
+// Generate Id:6d9351ce-5b12-43c0-8aee-3321476597e1
 using UnityEngine;
 
 namespace ProjectSurvivor
@@ -8,6 +8,8 @@ namespace ProjectSurvivor
 		public Transform HitBox;
 		
 		public UnityEngine.Rigidbody2D SelfRigidbody2D;
+		
+		public UnityEngine.SpriteRenderer Sprite;
 		
 	}
 }

@@ -232,7 +232,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 224360354940689636, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3787377620345104382}
+      addedObject: {fileID: 23048169712846079}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
 --- !u!1 &1287651722
@@ -374,6 +374,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &23048169712846079 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 976532045733999223, guid: 5f37ab97efb26334e8098b8402700e16, type: 3}
+  m_PrefabInstance: {fileID: 998871717633308296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &998871717633308296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -466,16 +471,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIGameOverPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2262900602895713911, guid: 5f37ab97efb26334e8098b8402700e16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269695064950050479, guid: 5f37ab97efb26334e8098b8402700e16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f37ab97efb26334e8098b8402700e16, type: 3}
---- !u!224 &3787377620345104382 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 976532045733999223, guid: 5f37ab97efb26334e8098b8402700e16, type: 3}
-  m_PrefabInstance: {fileID: 998871717633308296}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
