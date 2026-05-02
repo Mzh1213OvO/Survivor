@@ -22,9 +22,9 @@ namespace ProjectSurvivor{
         
         void Start(){
             HurtBox.OnTriggerEnter2DEvent(collider2D => {
+                
                 "Player Hurt".LogInfo();
 
-                // ResKit.Init();
                 
                 this.DestroyGameObjGracefully();
 

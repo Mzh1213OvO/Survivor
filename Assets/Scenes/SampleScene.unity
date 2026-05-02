@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.07058823, g: 0.9490196, b: 0.25222605, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -711,7 +711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1381160703}
-  - component: {fileID: 1381160702}
+  - component: {fileID: 1381160704}
   - component: {fileID: 1381160701}
   - component: {fileID: 1381160700}
   m_Layer: 0
@@ -767,27 +767,11 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   ViewControllerFullTypeName: 
+  health: 3
   moveSpeed: 2
   HitBox: {fileID: 1213375546}
   SelfRigidbody2D: {fileID: 1381160700}
   Sprite: {fileID: 39067853}
---- !u!114 &1381160702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381160699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Binds:
-  - MemberName: SelfRigidbody2D
-    Object: {fileID: 1381160700}
-  - MemberName: Sprite
-    Object: {fileID: 39067853}
 --- !u!4 &1381160703
 Transform:
   m_ObjectHideFlags: 0
@@ -805,6 +789,23 @@ Transform:
   - {fileID: 1213375546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1381160704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381160699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Binds:
+  - MemberName: SelfRigidbody2D
+    Object: {fileID: 1381160700}
+  - MemberName: Sprite
+    Object: {fileID: 39067853}
 --- !u!1 &2123592796
 GameObject:
   m_ObjectHideFlags: 0

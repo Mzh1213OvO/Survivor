@@ -26,12 +26,15 @@ namespace ProjectSurvivor{
                         
                         
                         enemy.Sprite.color = Color.red;
-                        "变红".LogInfo();
-
+                        
+                        "敌人受伤".LogInfo();
+                        
+                        // 闭包捕获
                         var enemyRefCache = enemy;
-
+                        
                         ActionKit.Delay(0.5f,() => {
                             enemyRefCache.Sprite.color = Color.white;
+                            enemyRefCache.health -= 1;
                         }).StartGlobal();
                     }
                 }
