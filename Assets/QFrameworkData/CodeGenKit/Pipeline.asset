@@ -18,9 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
+    BindInfos:
+    - TypeName: ProjectSurvivor.Enemy
+      PathToRoot: Enemy
+      MemberName: Enemy
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: GameUIController
+    ClassName: EnemyGenerator
     Namespace: ProjectSurvivor
     MainCode: 
     DesignerCode: 

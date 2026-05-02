@@ -623,13 +623,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5716610044715400648, guid: fe7d2b7668731c84682c36e317b7054b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8575115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716610044715400648, guid: fe7d2b7668731c84682c36e317b7054b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8575115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716610044715400648, guid: fe7d2b7668731c84682c36e317b7054b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935316692301756325, guid: fe7d2b7668731c84682c36e317b7054b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9111005856342733638, guid: fe7d2b7668731c84682c36e317b7054b, type: 3}
       propertyPath: m_Name
       value: UIGamePanel
       objectReference: {fileID: 0}
     - target: {fileID: 9111005856342733638, guid: fe7d2b7668731c84682c36e317b7054b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
