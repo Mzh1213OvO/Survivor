@@ -18,12 +18,9 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: Transform
-      PathToRoot: HitBox
-      MemberName: HitBox
+    BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: Enemy
+    ClassName: GameUIController
     Namespace: ProjectSurvivor
     MainCode: 
     DesignerCode: 

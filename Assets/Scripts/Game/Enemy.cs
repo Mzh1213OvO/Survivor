@@ -19,6 +19,7 @@ namespace ProjectSurvivor{
 
             if (health <= 0){
                 this.DestroyGameObjGracefully();
+                Global.Exp.Value += 2;
                 UIKit.OpenPanel<UIGamePassPanel>();
             }
         }
