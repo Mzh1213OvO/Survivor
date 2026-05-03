@@ -6,6 +6,8 @@ namespace ProjectSurvivor{
         private float _mCurrentSeconds = 0;
 
         private void Update(){
+            if (Player.Instance == null) return;
+            
             _mCurrentSeconds += Time.deltaTime;
 
             if (_mCurrentSeconds >= 1){

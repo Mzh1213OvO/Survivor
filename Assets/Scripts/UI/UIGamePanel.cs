@@ -22,9 +22,18 @@ namespace ProjectSurvivor{
             
             Global.Level.RegisterWithInitValue(level => {
                 LevelText.text="等级："+level;
+
+                if (level > 1){
+                    Time.timeScale = 0;
+                    UpgradeButton.Show();
+                }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
+
             
-            
+            UpgradeButton.onClick.AddListener(() => {
+                Time.timeScale = 1;
+                UpgradeButton.Hide();
+            });
         }
 
         protected override void OnOpen(IUIData uiData = null){ }
