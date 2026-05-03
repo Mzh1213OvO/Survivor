@@ -11,6 +11,7 @@ namespace ProjectSurvivor
 		public const string Name = "UIGamePanel";
 
 		public Text ExpText;
+		public Text LevelText;
 		
 		private UIGamePanelData mPrivateData = null;
 		
