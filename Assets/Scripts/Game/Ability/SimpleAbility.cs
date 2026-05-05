@@ -9,6 +9,7 @@ namespace ProjectSurvivor{
         }
 
         void Update(){
+            if (Player.Instance == null) return;
             
             _mCurrentSeconds += Time.deltaTime;
 

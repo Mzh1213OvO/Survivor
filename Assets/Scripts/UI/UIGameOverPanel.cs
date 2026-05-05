@@ -14,6 +14,7 @@ namespace ProjectSurvivor{
             ActionKit.OnUpdate.Register(() => {
                 if (Input.GetKeyDown(KeyCode.Space)){
                     SceneManager.LoadScene("Main");
+                    Global.Reset();
                     this.CloseSelf();
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
