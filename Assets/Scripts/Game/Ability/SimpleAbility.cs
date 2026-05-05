@@ -24,7 +24,6 @@ namespace ProjectSurvivor{
 
                     if (distance <= 5){
                         
-                        
                         enemy.Sprite.color = Color.red;
                         
                         "敌人受伤".LogInfo();
@@ -34,7 +33,7 @@ namespace ProjectSurvivor{
                         
                         ActionKit.Delay(0.5f,() => {
                             enemyRefCache.Sprite.color = Color.white;
-                            enemyRefCache.health -= 1;
+                            enemyRefCache.health -= Global.Damage.Value;
                         }).StartGlobal();
                     }
                 }

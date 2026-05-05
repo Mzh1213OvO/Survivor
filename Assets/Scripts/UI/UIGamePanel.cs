@@ -28,10 +28,25 @@ namespace ProjectSurvivor{
                     UpgradeButton.Show();
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
+            
+            Global.CurrentSeconds.RegisterWithInitValue(currentSeconds => {
+                if (Time.frameCount % 30 != 0) return;
+                
+                var currentSecondsInt = Mathf.FloorToInt(currentSeconds);
+                var seconds = currentSecondsInt % 60;
+                var minutes = currentSeconds / 60;
 
+                TimeText.text = $"时间:{minutes:00}:{seconds:00}";
+
+            }).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+            ActionKit.OnUpdate.Register(() => {
+                Global.CurrentSeconds.Value += Time.deltaTime;
+            }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
             UpgradeButton.onClick.AddListener(() => {
                 Time.timeScale = 1;
+                Global.Damage.Value += 1;
                 UpgradeButton.Hide();
             });
         }
