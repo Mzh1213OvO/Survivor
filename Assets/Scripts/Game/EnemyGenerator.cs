@@ -16,6 +16,8 @@ namespace ProjectSurvivor{
         private float _currentGenerateSeconds = 0; // 刷怪间隔
         private float _currentWaveSeconds = 0; // 当前波次持续时间
 
+        public static BindableProperty<int> EnemyCount = new BindableProperty<int>(0);
+        
         public List<EnemyWave> enemyWaves = new List<EnemyWave>();
 
         private Queue<EnemyWave> _enemyWavesQueue = new Queue<EnemyWave>();
@@ -24,6 +26,7 @@ namespace ProjectSurvivor{
         
         public int waveCount = 0;
         public bool LastWave => waveCount == enemyWaves.Count;
+        public EnemyWave CurrentWave => currentWave;
         
         private void Start(){
             foreach (var enemyWave in enemyWaves){

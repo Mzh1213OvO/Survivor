@@ -6,6 +6,11 @@ namespace ProjectSurvivor{
         public float health = 3;
         public float moveSpeed = 2.0f;
         void Start(){
+            EnemyGenerator.EnemyCount.Value++;
+        }
+        
+        void OnDestroy(){
+            EnemyGenerator.EnemyCount.Value--;
         }
 
         void Update(){

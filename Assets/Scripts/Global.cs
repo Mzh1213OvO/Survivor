@@ -18,6 +18,7 @@ namespace ProjectSurvivor{
             Level.Value = 1;
             Damage.Value = 1;
             CurrentSeconds.Value = 0;
+            EnemyGenerator.EnemyCount.Value = 0;
         }
     }
 }

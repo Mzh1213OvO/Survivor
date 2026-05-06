@@ -29,6 +29,10 @@ namespace ProjectSurvivor{
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
+            EnemyGenerator.EnemyCount.RegisterWithInitValue(enemyCount => {
+                EnemyCountText.text="敌人："+enemyCount;
+            }).UnRegisterWhenGameObjectDestroyed(gameObject);
+            
             Global.CurrentSeconds.RegisterWithInitValue(currentSeconds => {
                 if (Time.frameCount % 30 != 0) return;
                 
@@ -44,8 +48,8 @@ namespace ProjectSurvivor{
             ActionKit.OnUpdate.Register(() => {
                 Global.CurrentSeconds.Value += Time.deltaTime;
                 
-                //获胜时间
-                if (Global.CurrentSeconds.Value >= 60 && enemyGenerator.LastWave && !FindObjectOfType<Enemy>(false)){
+                //胜利条件
+                if (enemyGenerator.LastWave && EnemyGenerator.EnemyCount.Value==0 && enemyGenerator.CurrentWave==null){
                     UIKit.OpenPanel<UIGamePassPanel>();
                 }
                 
