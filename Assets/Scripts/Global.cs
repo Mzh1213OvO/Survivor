@@ -17,6 +17,9 @@ namespace ProjectSurvivor{
         
         public static BindableProperty<float> DamageFrequency = new BindableProperty<float>(1.5f);
 
+        public static BindableProperty<float> ExpPercent = new BindableProperty<float>(0.3f);
+        public static BindableProperty<float> CoinPercent = new BindableProperty<float>(0.05f);
+        
         public static void Reset(){
             Exp.Value = 0;
             Level.Value = 1;

@@ -83,6 +83,8 @@ namespace ProjectSurvivor{
                 CoinText.text = "金币:" + coin;
 
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
+            
+            
         }
 
 
