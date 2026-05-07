@@ -19,11 +19,14 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: ProjectSurvivor.Enemy
-      PathToRoot: Enemy
-      MemberName: Enemy
+    - TypeName: SpriteRenderer
+      PathToRoot: Sprite
+      MemberName: Sprite
+    - TypeName: UnityEngine.Transform
+      PathToRoot: HitBox
+      MemberName: HitBox
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: EnemyGenerator
+    ClassName: Exp
     Namespace: ProjectSurvivor
     MainCode: 
     DesignerCode: 
