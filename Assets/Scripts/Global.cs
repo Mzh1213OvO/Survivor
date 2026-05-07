@@ -23,5 +23,9 @@ namespace ProjectSurvivor{
             CurrentSeconds.Value = 0;
             EnemyGenerator.EnemyCount.Value = 0;
         }
+
+        public static int ExpToNextLevel(){
+            return Level.Value * 5;
+        }
     }
 }

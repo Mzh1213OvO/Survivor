@@ -12,10 +12,10 @@ namespace ProjectSurvivor{
             
             // 经验值UI
             Global.Exp.RegisterWithInitValue(exp => {
-                ExpText.text="经验值："+exp;
+                ExpText.text = "经验值：(" + exp + "/" + Global.ExpToNextLevel()+")";
 
-                if (exp >= 5){
-                    Global.Exp.Value -= 5;
+                if (exp >= Global.ExpToNextLevel()){
+                    Global.Exp.Value -= Global.ExpToNextLevel();
                     Global.Level.Value += 1;
                 }
                 
