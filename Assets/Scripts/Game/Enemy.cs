@@ -24,9 +24,9 @@ namespace ProjectSurvivor{
 
 
             if (health <= 0){
-                this.DestroyGameObjGracefully();
-                
                 //TODO: 经验值的掉落
+                Global.GeneratePowerUp(gameObject);
+                this.DestroyGameObjGracefully();
             }
         }
 

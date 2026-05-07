@@ -19,14 +19,11 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: SpriteRenderer
-      PathToRoot: Sprite
-      MemberName: Sprite
-    - TypeName: UnityEngine.Transform
-      PathToRoot: HitBox
-      MemberName: HitBox
+    - TypeName: ProjectSurvivor.Exp
+      PathToRoot: Exp
+      MemberName: Exp
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: Exp
+    ClassName: PowerUpManager
     Namespace: ProjectSurvivor
     MainCode: 
     DesignerCode: 

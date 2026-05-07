@@ -27,5 +27,16 @@ namespace ProjectSurvivor{
         public static int ExpToNextLevel(){
             return Level.Value * 5;
         }
+
+        public static void GeneratePowerUp(GameObject gameObject){
+            var random = Random.Range(0, 100.0f);
+
+            if (random <= 90){
+                //掉落经验值
+                PowerUpManager.Instance.Exp.Instantiate()
+                    .Position(gameObject.Position())
+                    .Show();
+            }
+        }
     }
 }
