@@ -73,6 +73,16 @@ namespace ProjectSurvivor{
                 Global.DamageFrequency.Value *= 0.8f;
                 UpgradeButtons.Hide();
             });
+
+            Global.Coin.Value = PlayerPrefs.GetInt("coin", 0);
+            
+            // 金币UI
+            Global.Coin.RegisterWithInitValue(coin => {
+                PlayerPrefs.SetInt("coin",coin);
+
+                CoinText.text = "金币:" + coin;
+
+            }).UnRegisterWhenGameObjectDestroyed(gameObject);
         }
 
 

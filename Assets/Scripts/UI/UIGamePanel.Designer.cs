@@ -12,6 +12,7 @@ namespace ProjectSurvivor
 
 		public Text ExpText;
 		public Text LevelText;
+		public Text CoinText;
 		public Text TimeText;
 		public Text EnemyCountText;
 		public Button DamageUpButton;

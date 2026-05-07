@@ -22,6 +22,9 @@ MonoBehaviour:
     - TypeName: ProjectSurvivor.Exp
       PathToRoot: Exp
       MemberName: Exp
+    - TypeName: ProjectSurvivor.Coin
+      PathToRoot: Coin
+      MemberName: Coin
     ScriptsFolder: Assets/Scripts/Game
     ClassName: PowerUpManager
     Namespace: ProjectSurvivor

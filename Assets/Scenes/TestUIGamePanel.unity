@@ -325,6 +325,14 @@ PrefabInstance:
       propertyPath: LevelText
       value: 
       objectReference: {fileID: 497929134}
+    - target: {fileID: 7263976791923080459, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263976791923080459, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -146
+      objectReference: {fileID: 0}
     - target: {fileID: 8046208220901461600, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 6
