@@ -40,12 +40,12 @@ namespace ProjectSurvivor{
         private void Update(){
             // 波次为空，从队列中取出下一波
             if (currentWave == null){
-                waveCount++;
-                Debug.Log($"开始波次{waveCount}");
                 if (_enemyWavesQueue.Count > 0){
                     currentWave = _enemyWavesQueue.Dequeue();
                     _currentGenerateSeconds = 0;
                     _currentWaveSeconds = 0;
+                    waveCount++;
+                    Debug.Log($"开始波次{waveCount}");
                 }
             }
 

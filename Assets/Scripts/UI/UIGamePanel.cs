@@ -9,7 +9,8 @@ namespace ProjectSurvivor{
     public partial class UIGamePanel : UIPanel{
         protected override void OnInit(IUIData uiData = null){
             mData = uiData as UIGamePanelData ?? new UIGamePanelData();
-
+            
+            // 经验值UI
             Global.Exp.RegisterWithInitValue(exp => {
                 ExpText.text="经验值："+exp;
 
@@ -20,19 +21,22 @@ namespace ProjectSurvivor{
                 
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
+            // 等级UI
             Global.Level.RegisterWithInitValue(level => {
                 LevelText.text="等级："+level;
 
                 if (level > 1){
                     Time.timeScale = 0;
-                    UpgradeButton.Show();
+                    UpgradeButtons.Show();
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
+            // 敌人数量UI
             EnemyGenerator.EnemyCount.RegisterWithInitValue(enemyCount => {
                 EnemyCountText.text="敌人："+enemyCount;
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
+            // 时间UI
             Global.CurrentSeconds.RegisterWithInitValue(currentSeconds => {
                 if (Time.frameCount % 30 != 0) return;
                 
@@ -44,6 +48,7 @@ namespace ProjectSurvivor{
 
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
 
+            // 胜利条件UI
             var enemyGenerator = GameObject.FindObjectOfType<EnemyGenerator>();
             ActionKit.OnUpdate.Register(() => {
                 Global.CurrentSeconds.Value += Time.deltaTime;
@@ -55,12 +60,22 @@ namespace ProjectSurvivor{
                 
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
-            UpgradeButton.onClick.AddListener(() => {
+            // 攻击力UP按钮
+            DamageUpButton.onClick.AddListener(() => {
                 Time.timeScale = 1;
-                Global.Damage.Value += 1;
-                UpgradeButton.Hide();
+                Global.Damage.Value *= 1.5f;
+                UpgradeButtons.Hide();
+            });
+            
+            // 攻击频率UP按钮
+            DamageFrequencyButton.onClick.AddListener(() => {
+                Time.timeScale = 1;
+                Global.DamageFrequency.Value *= 0.8f;
+                UpgradeButtons.Hide();
             });
         }
+
+
 
         protected override void OnOpen(IUIData uiData = null){ }
 

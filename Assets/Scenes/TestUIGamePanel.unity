@@ -273,9 +273,49 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u654C\u4EBA\uFF1A0"
       objectReference: {fileID: 0}
+    - target: {fileID: 2032772671417558083, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032772671417558083, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 2186557232372875338, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698397487808674553, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 362.9689
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698397487808674553, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 180.2251
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698397487808674553, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -222.8489
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698397487808674553, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -59.8875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039327789841379624, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039327789841379624, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148325307395404706, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148325307395404706, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5635721957966704116, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
       propertyPath: m_Name
@@ -285,9 +325,33 @@ PrefabInstance:
       propertyPath: LevelText
       value: 
       objectReference: {fileID: 497929134}
+    - target: {fileID: 8046208220901461600, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046208220901461600, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225500786717615964, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8527345540727045420, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8984639729895196790, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_Name
+      value: DamageUpButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8984639729895196790, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098672641076175648, guid: c70aac0028afd42eabc9e0c55824c824, type: 3}
+      propertyPath: m_Text
+      value: "\u653B\u51FB\u529BUP"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

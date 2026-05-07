@@ -14,7 +14,10 @@ namespace ProjectSurvivor
 		public Text LevelText;
 		public Text TimeText;
 		public Text EnemyCountText;
-		public Button UpgradeButton;
+		public Button DamageUpButton;
+		public Button DamageFrequencyButton;
+
+		public GameObject UpgradeButtons;
 		
 		private UIGamePanelData mPrivateData = null;
 		
