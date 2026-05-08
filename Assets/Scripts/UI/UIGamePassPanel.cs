@@ -12,16 +12,20 @@ namespace ProjectSurvivor{
             Time.timeScale = 0;
             
             mData = uiData as UIGamePassPanelData ?? new UIGamePassPanelData();
-            // please add init code here
             
             
             ActionKit.OnUpdate.Register(() => {
                 if (Input.GetKeyDown(KeyCode.Space)){
-                    SceneManager.LoadScene("Main");
+                    SceneManager.LoadScene("Game");
                     this.CloseSelf();
                     Global.Reset();
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
+            
+            BackMenuBtn.onClick.AddListener(() => {
+                this.CloseSelf();
+                SceneManager.LoadScene("GameStart");
+            });
         }
 
         protected override void OnOpen(IUIData uiData = null){ }

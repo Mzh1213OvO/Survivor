@@ -5,13 +5,15 @@ using QFramework;
 
 namespace ProjectSurvivor
 {
-	// Generate Id:b7897748-3b50-402a-9c96-f3fa9d82d5b0
+	// Generate Id:afbf19fa-a950-4001-9e85-9d9a2b4787ed
 	public partial class UIGameStartPanel
 	{
 		public const string Name = "UIGameStartPanel";
 		
 		[SerializeField]
 		public UnityEngine.UI.Button CoinUpgradeBtn;
+		[SerializeField]
+		public UnityEngine.UI.Button StartGameBtn;
 		[SerializeField]
 		public RectTransform CoinUpgradePanel;
 		[SerializeField]
@@ -20,16 +22,20 @@ namespace ProjectSurvivor
 		public UnityEngine.UI.Button ExpPercentUpgradeBtn;
 		[SerializeField]
 		public UnityEngine.UI.Button CloseButton;
+		[SerializeField]
+		public Text CoinText;
 		
 		private UIGameStartPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
 			CoinUpgradeBtn = null;
+			StartGameBtn = null;
 			CoinUpgradePanel = null;
 			CoinPercentUpgradeBtn = null;
 			ExpPercentUpgradeBtn = null;
 			CloseButton = null;
+			CoinText = null;
 			
 			mData = null;
 		}

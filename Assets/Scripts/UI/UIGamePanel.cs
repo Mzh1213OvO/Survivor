@@ -74,21 +74,15 @@ namespace ProjectSurvivor{
                 UpgradeButtons.Hide();
             });
 
-            Global.Coin.Value = PlayerPrefs.GetInt("coin", 0);
             
             // 金币UI
             Global.Coin.RegisterWithInitValue(coin => {
-                PlayerPrefs.SetInt("coin",coin);
-
                 CoinText.text = "金币:" + coin;
 
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
-            
         }
-
-
-
+        
         protected override void OnOpen(IUIData uiData = null){ }
 
         protected override void OnShow(){ }

@@ -18,7 +18,28 @@ namespace ProjectSurvivor{
         public static BindableProperty<float> DamageFrequency = new BindableProperty<float>(1.5f);
 
         public static BindableProperty<float> ExpPercent = new BindableProperty<float>(0.3f);
+        
         public static BindableProperty<float> CoinPercent = new BindableProperty<float>(0.05f);
+
+        [RuntimeInitializeOnLoadMethod]
+        public static void AutoInit(){
+            Global.Coin.Value = PlayerPrefs.GetInt("Coin", 0);
+            
+            Global.ExpPercent.Value = PlayerPrefs.GetFloat(nameof(ExpPercent), 0.3f);
+            Global.CoinPercent.Value=PlayerPrefs.GetFloat(nameof(CoinPercent), 0.05f);
+            
+            Global.Coin.Register(coin => {
+                PlayerPrefs.SetInt(nameof(Coin),coin);
+            });
+            
+            Global.ExpPercent.Register(expPercent => {
+                PlayerPrefs.SetFloat(nameof(ExpPercent),expPercent);
+            });
+            
+            Global.CoinPercent.Register(coinPercent => {
+                PlayerPrefs.SetFloat(nameof(CoinPercent),coinPercent);
+            });
+        }
         
         public static void Reset(){
             Exp.Value = 0;
@@ -34,15 +55,17 @@ namespace ProjectSurvivor{
         }
 
         public static void GeneratePowerUp(GameObject gameObject){
-            var random = Random.Range(0, 100.0f);
+            var percent = Random.Range(0, 1f);
 
-            if (random <= 90){
-                //掉落经验值
+            if (percent < ExpPercent.Value){
                 PowerUpManager.Instance.Exp.Instantiate()
                     .Position(gameObject.Position())
                     .Show();
             }
-            else{
+
+            percent = Random.Range(0, 1f);
+
+            if (percent < CoinPercent.Value){
                 PowerUpManager.Instance.Coin.Instantiate()
                     .Position(gameObject.Position())
                     .Show();

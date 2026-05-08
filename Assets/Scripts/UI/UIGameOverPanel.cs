@@ -13,11 +13,16 @@ namespace ProjectSurvivor{
 
             ActionKit.OnUpdate.Register(() => {
                 if (Input.GetKeyDown(KeyCode.Space)){
-                    SceneManager.LoadScene("Main");
+                    SceneManager.LoadScene("Game");
                     Global.Reset();
                     this.CloseSelf();
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
+            
+            BackMenuBtn.onClick.AddListener(() => {
+                this.CloseSelf();
+                SceneManager.LoadScene("GameStart");
+            });
         }
 
         protected override void OnOpen(IUIData uiData = null){ }
