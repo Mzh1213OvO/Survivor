@@ -4,7 +4,9 @@ using QFramework;
 using UnityEngine;
 
 namespace ProjectSurvivor{
-    public class Global : MonoBehaviour{
+    public class Global : Architecture<Global>{
+       
+        # region Model
         public static BindableProperty<int> Exp = new BindableProperty<int>(0);
         
         public static BindableProperty<int> Coin = new BindableProperty<int>(0);
@@ -21,11 +23,13 @@ namespace ProjectSurvivor{
         
         public static BindableProperty<float> CoinPercent = new BindableProperty<float>(0.05f);
 
+        #endregion
+        
         [RuntimeInitializeOnLoadMethod]
         public static void AutoInit(){
             ResKit.Init();
             
-            UIKit.Root.SetResolution(1920,1080,1);
+            // UIKit.Root.SetResolution(1920,1080,1);
             
             Global.Coin.Value = PlayerPrefs.GetInt("Coin", 0);
             
@@ -74,6 +78,12 @@ namespace ProjectSurvivor{
                     .Position(gameObject.Position())
                     .Show();
             }
+        }
+
+        /// <summary>
+        /// 注册模块
+        /// </summary>
+        protected override void Init(){
         }
     }
 }
