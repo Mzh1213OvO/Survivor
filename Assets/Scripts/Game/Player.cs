@@ -29,8 +29,14 @@ namespace ProjectSurvivor{
                 if (hitBox){
                     "Player Hurt".LogInfo();
                     if (hitBox.owner.CompareTag("Enemy")){
-                        this.DestroyGameObjGracefully();
-                        UIKit.OpenPanel<UIGameOverPanel>();
+
+                        Global.Hp.Value--;
+
+                        if (Global.Hp.Value <= 0){
+                            Time.timeScale = 0;
+                            this.DestroyGameObjGracefully();
+                            UIKit.OpenPanel<UIGameOverPanel>();    
+                        }
                     }
                 }
                 

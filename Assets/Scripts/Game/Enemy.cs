@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using QFramework;
 
@@ -14,15 +15,18 @@ namespace ProjectSurvivor{
             if(EnemyGenerator.EnemyCount.Value <= 0)EnemyGenerator.EnemyCount.Value = 0;
         }
 
-        void Update(){
-
+        private void FixedUpdate(){
             if (Player.Instance != null){
                 var dir = (Player.Instance.transform.position - transform.position).normalized;
-
-                transform.Translate(dir*Time.deltaTime*moveSpeed);
+                
+                SelfRigidbody2D.velocity = dir * moveSpeed;
             }
+            else{
+                SelfRigidbody2D.velocity = Vector2.zero;
+            }
+        }
 
-
+        void Update(){
             if (health <= 0){
                 //TODO: 经验值的掉落
                 Global.GeneratePowerUp(gameObject);

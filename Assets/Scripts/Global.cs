@@ -7,6 +7,8 @@ namespace ProjectSurvivor{
     public class Global : Architecture<Global>{
        
         # region Model
+        public static BindableProperty<int> Hp = new BindableProperty<int>(3);
+        
         public static BindableProperty<int> Exp = new BindableProperty<int>(0);
         
         public static BindableProperty<int> Coin = new BindableProperty<int>(0);
@@ -50,6 +52,7 @@ namespace ProjectSurvivor{
         }
         
         public static void Reset(){
+            Hp.Value = 3;
             Exp.Value = 0;
             Level.Value = 1;
             Damage.Value = 1;

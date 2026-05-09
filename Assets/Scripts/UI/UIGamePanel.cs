@@ -10,6 +10,11 @@ namespace ProjectSurvivor{
         protected override void OnInit(IUIData uiData = null){
             mData = uiData as UIGamePanelData ?? new UIGamePanelData();
             
+            // 生命值UI
+            Global.Hp.RegisterWithInitValue(hp => {
+                HpText.text = "生命值：" + hp;
+            }).UnRegisterWhenGameObjectDestroyed(gameObject);
+            
             // 经验值UI
             Global.Exp.RegisterWithInitValue(exp => {
                 ExpText.text = "经验值：(" + exp + "/" + Global.ExpToNextLevel()+")";

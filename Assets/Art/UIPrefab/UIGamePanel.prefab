@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 302, y: -540}
+  m_AnchoredPosition: {x: 302, y: -756}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &657026820401550916
@@ -248,6 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8882634835310626606}
+  - component: {fileID: 8913825026383516432}
   m_Layer: 5
   m_Name: UpgradeButtons
   m_TagString: Untagged
@@ -276,6 +277,22 @@ RectTransform:
   m_AnchoredPosition: {x: 202.9505, y: 1.5562515}
   m_SizeDelta: {x: 767.901, y: 183.1125}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8913825026383516432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042246178907831023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: UpgradeButtons
+  CustomComment: 
+  mComponentName: RectTransform
 --- !u!1 &4556639157115204174
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +308,7 @@ GameObject:
   - component: {fileID: 622259121806307887}
   - component: {fileID: 2097753654623801258}
   m_Layer: 5
-  m_Name: LeveText
+  m_Name: LevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,7 +330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 302, y: -360}
+  m_AnchoredPosition: {x: 302, y: -576}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &527349438654687715
@@ -569,7 +586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 302, y: -180}
+  m_AnchoredPosition: {x: 302, y: -396}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6397016695391906536
@@ -783,6 +800,7 @@ GameObject:
   - component: {fileID: 4189731253527215134}
   - component: {fileID: 2922325520455490301}
   - component: {fileID: 8765231853542506312}
+  - component: {fileID: 5295035496682087553}
   m_Layer: 5
   m_Name: DamageUpButton
   m_TagString: Untagged
@@ -892,6 +910,150 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5295035496682087553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397003426168817180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: DamageUpButton
+  CustomComment: 
+  mComponentName: UnityEngine.UI.Button
+--- !u!1 &8398215644933367211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33556057703268355}
+  - component: {fileID: 1497760972405714532}
+  - component: {fileID: 529491781270048328}
+  - component: {fileID: 7093002717407229635}
+  - component: {fileID: 8027813551857709839}
+  - component: {fileID: 8124170552162696424}
+  m_Layer: 5
+  m_Name: HpText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &33556057703268355
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398215644933367211}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2528710879917693358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 302, y: -179.5}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1497760972405714532
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398215644933367211}
+  m_CullTransparentMesh: 1
+--- !u!114 &529491781270048328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398215644933367211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.94117653, g: 0.9568628, b: 0.9607844, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b88889d0af0b1c0438c48048da606320, type: 3}
+    m_FontSize: 64
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 96
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Hp\uFF1A3"
+--- !u!114 &7093002717407229635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398215644933367211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: Text Exp
+  CustomComment: 
+  mComponentName: UnityEngine.UI.Text
+--- !u!114 &8027813551857709839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398215644933367211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &8124170552162696424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398215644933367211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8740008029816942001
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +1069,7 @@ GameObject:
   - component: {fileID: 3621922392573744603}
   - component: {fileID: 4588420614585035312}
   m_Layer: 5
-  m_Name: EnemyCount
+  m_Name: EnemyCountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -929,7 +1091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 302, y: -720}
+  m_AnchoredPosition: {x: 302, y: -936}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8966757151261923653
@@ -1032,6 +1194,7 @@ GameObject:
   - component: {fileID: 7918707205446553836}
   - component: {fileID: 2391459447096038330}
   - component: {fileID: 2087016309609218436}
+  - component: {fileID: 403418434802623069}
   m_Layer: 5
   m_Name: DamageFrequencyButton
   m_TagString: Untagged
@@ -1141,6 +1304,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &403418434802623069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791349152416786742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: DamageFrequencyButton
+  CustomComment: 
+  mComponentName: UnityEngine.UI.Button
 --- !u!1 &9111005856342733638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,10 +1352,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1621236685387959840}
+  - {fileID: 33556057703268355}
   - {fileID: 1121174493021662432}
-  - {fileID: 7847848342041506657}
   - {fileID: 1014047414150962331}
   - {fileID: 2433682916138660778}
+  - {fileID: 7847848342041506657}
   - {fileID: 8882634835310626606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1236,10 +1416,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpText: {fileID: 5716610044715400648}
+  HpText: {fileID: 529491781270048328}
   LevelText: {fileID: 5604929812247084866}
-  CoinText: {fileID: 6035817440803694681}
   TimeText: {fileID: 7461940820928413706}
   EnemyCountText: {fileID: 1446262283183532585}
+  CoinText: {fileID: 6035817440803694681}
+  UpgradeButtons: {fileID: 8882634835310626606}
   DamageUpButton: {fileID: 8765231853542506312}
   DamageFrequencyButton: {fileID: 2087016309609218436}
-  UpgradeButtons: {fileID: 3042246178907831023}

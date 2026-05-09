@@ -15,11 +15,13 @@ namespace ProjectSurvivor{
                 if (Input.GetKeyDown(KeyCode.Space)){
                     SceneManager.LoadScene("Game");
                     Global.Reset();
+                    Time.timeScale = 1;
                     this.CloseSelf();
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
             BackMenuBtn.onClick.AddListener(() => {
+                Time.timeScale = 1;
                 this.CloseSelf();
                 SceneManager.LoadScene("GameStart");
             });
@@ -27,9 +29,11 @@ namespace ProjectSurvivor{
 
         protected override void OnOpen(IUIData uiData = null){ }
 
-        protected override void OnShow(){ }
+        protected override void OnShow(){
+        }
 
-        protected override void OnHide(){ }
+        protected override void OnHide(){
+        }
 
         protected override void OnClose(){ }
     }
