@@ -23,10 +23,14 @@ namespace ProjectSurvivor{
 
         [RuntimeInitializeOnLoadMethod]
         public static void AutoInit(){
+            ResKit.Init();
+            
+            UIKit.Root.SetResolution(1920,1080,1);
+            
             Global.Coin.Value = PlayerPrefs.GetInt("Coin", 0);
             
-            Global.ExpPercent.Value = PlayerPrefs.GetFloat(nameof(ExpPercent), 0.3f);
-            Global.CoinPercent.Value=PlayerPrefs.GetFloat(nameof(CoinPercent), 0.05f);
+            Global.ExpPercent.Value = PlayerPrefs.GetFloat(nameof(ExpPercent), 0.4f);
+            Global.CoinPercent.Value=PlayerPrefs.GetFloat(nameof(CoinPercent), 0.1f);
             
             Global.Coin.Register(coin => {
                 PlayerPrefs.SetInt(nameof(Coin),coin);

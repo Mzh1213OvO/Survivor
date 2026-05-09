@@ -5,7 +5,7 @@ namespace ProjectSurvivor{
     public partial class GameStartController : ViewController{
 
         private void Awake(){
-            ResKit.Init();
+            // ResKit.Init();
         }
         
         void Start(){
