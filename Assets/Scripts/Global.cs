@@ -9,6 +9,8 @@ namespace ProjectSurvivor{
         # region Model
         public static BindableProperty<int> Hp = new BindableProperty<int>(3);
         
+        public static BindableProperty<int> MaxHp = new BindableProperty<int>(3);
+        
         public static BindableProperty<int> Exp = new BindableProperty<int>(0);
         
         public static BindableProperty<int> Coin = new BindableProperty<int>(0);
@@ -32,10 +34,14 @@ namespace ProjectSurvivor{
             ResKit.Init();
             
             // UIKit.Root.SetResolution(1920,1080,1);
+
+            Global.MaxHp.Value=PlayerPrefs.GetInt(nameof(MaxHp), 3);
+            Hp.Value = MaxHp.Value;
             
             Global.Coin.Value = PlayerPrefs.GetInt("Coin", 0);
             
             Global.ExpPercent.Value = PlayerPrefs.GetFloat(nameof(ExpPercent), 0.4f);
+            
             Global.CoinPercent.Value=PlayerPrefs.GetFloat(nameof(CoinPercent), 0.1f);
             
             Global.Coin.Register(coin => {
@@ -49,10 +55,14 @@ namespace ProjectSurvivor{
             Global.CoinPercent.Register(coinPercent => {
                 PlayerPrefs.SetFloat(nameof(CoinPercent),coinPercent);
             });
+
+            Global.MaxHp.Register(maxHP => {
+                PlayerPrefs.SetInt(nameof(MaxHp),maxHP);
+            });
         }
         
         public static void Reset(){
-            Hp.Value = 3;
+            Hp.Value = MaxHp.Value;
             Exp.Value = 0;
             Level.Value = 1;
             Damage.Value = 1;

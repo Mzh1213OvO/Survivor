@@ -12,7 +12,11 @@ namespace ProjectSurvivor{
             
             // 生命值UI
             Global.Hp.RegisterWithInitValue(hp => {
-                HpText.text = "生命值：" + hp;
+                HpText.text = "生命值：" + hp + "/"+Global.MaxHp;
+            }).UnRegisterWhenGameObjectDestroyed(gameObject);
+            
+            Global.MaxHp.RegisterWithInitValue(maxHP => {
+                HpText.text = "生命值：" + Global.Hp + "/"+maxHP;
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
             // 经验值UI
