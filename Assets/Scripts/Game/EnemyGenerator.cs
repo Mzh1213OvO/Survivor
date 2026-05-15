@@ -63,7 +63,7 @@ namespace ProjectSurvivor{
                         var randomAngle = Random.Range(0, 360f);
                         var randomRadius = randomAngle * Mathf.Deg2Rad;
                         var dir = new Vector3(Mathf.Cos(randomRadius), Mathf.Sin(randomRadius));
-                        var targetPos = player.transform.position + dir * 15;
+                        var targetPos = player.transform.position + dir * 8;
 
                         if (currentWave.enemyPrefab != null){
                             currentWave.enemyPrefab.Instantiate()
