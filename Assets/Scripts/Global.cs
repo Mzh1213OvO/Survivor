@@ -82,6 +82,8 @@ namespace ProjectSurvivor{
                 PowerUpManager.Instance.Exp.Instantiate()
                     .Position(gameObject.Position())
                     .Show();
+
+                return;
             }
 
             percent = Random.Range(0, 1f);
@@ -90,6 +92,17 @@ namespace ProjectSurvivor{
                 PowerUpManager.Instance.Coin.Instantiate()
                     .Position(gameObject.Position())
                     .Show();
+                return;
+            }
+            
+            percent = Random.Range(0, 1f);
+
+            //todo:血瓶掉落概率
+            if (percent < 0.3F){
+                PowerUpManager.Instance.BloodBottle.Instantiate()
+                    .Position(gameObject.Position())
+                    .Show();
+                return;
             }
         }
 

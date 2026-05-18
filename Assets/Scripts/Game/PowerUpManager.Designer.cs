@@ -1,4 +1,4 @@
-// Generate Id:2be21694-efec-4ac0-b80f-4d9bd397aac1
+// Generate Id:422c2718-6b14-48d0-b165-11172487152e
 using UnityEngine;
 
 namespace ProjectSurvivor
@@ -8,6 +8,8 @@ namespace ProjectSurvivor
 		public ProjectSurvivor.Exp Exp;
 		
 		public ProjectSurvivor.Coin Coin;
+		
+		public CircleCollider2D BloodBottle;
 		
 	}
 }

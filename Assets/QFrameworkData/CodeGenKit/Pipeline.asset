@@ -18,9 +18,18 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
+    BindInfos:
+    - TypeName: ProjectSurvivor.Exp
+      PathToRoot: Exp
+      MemberName: Exp
+    - TypeName: ProjectSurvivor.Coin
+      PathToRoot: Coin
+      MemberName: Coin
+    - TypeName: CircleCollider2D
+      PathToRoot: BloodBottle
+      MemberName: BloodBottle
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: GameStartController
+    ClassName: PowerUpManager
     Namespace: ProjectSurvivor
     MainCode: 
     DesignerCode: 
