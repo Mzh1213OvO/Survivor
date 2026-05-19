@@ -25,9 +25,12 @@ MonoBehaviour:
     - TypeName: ProjectSurvivor.Coin
       PathToRoot: Coin
       MemberName: Coin
-    - TypeName: CircleCollider2D
+    - TypeName: ProjectSurvivor.BloodBottle
       PathToRoot: BloodBottle
       MemberName: BloodBottle
+    - TypeName: ProjectSurvivor.Bomb
+      PathToRoot: Bomb
+      MemberName: Bomb
     ScriptsFolder: Assets/Scripts/Game
     ClassName: PowerUpManager
     Namespace: ProjectSurvivor

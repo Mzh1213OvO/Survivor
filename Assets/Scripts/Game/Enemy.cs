@@ -35,8 +35,8 @@ namespace ProjectSurvivor{
         }
 
         private bool _isHurting = false;//防止第一次受伤还没生效就第二次受伤
-        public void Hurt(float damageValue){
-            if (_isHurting) return;
+        public void Hurt(float damageValue,bool bombDamage = false){
+            if (_isHurting && !bombDamage) return;
             
             Sprite.color = Color.red;
                         
@@ -44,7 +44,7 @@ namespace ProjectSurvivor{
                         
             ActionKit.Delay(0.2f,() => {
                 this.Sprite.color = Color.white;
-                this.health -= Global.Damage.Value;
+                this.health -= damageValue;
                 _isHurting = false;
             }).Start(this);
         }
