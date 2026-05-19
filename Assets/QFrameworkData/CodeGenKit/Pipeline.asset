@@ -18,24 +18,9 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: ProjectSurvivor.Exp
-      PathToRoot: Exp
-      MemberName: Exp
-    - TypeName: ProjectSurvivor.Coin
-      PathToRoot: Coin
-      MemberName: Coin
-    - TypeName: ProjectSurvivor.BloodBottle
-      PathToRoot: BloodBottle
-      MemberName: BloodBottle
-    - TypeName: ProjectSurvivor.Bomb
-      PathToRoot: Bomb
-      MemberName: Bomb
-    - TypeName: ProjectSurvivor.GetAllExp
-      PathToRoot: GetAllExp
-      MemberName: GetAllExp
+    BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: PowerUpManager
+    ClassName: CameraController
     Namespace: ProjectSurvivor
     MainCode: 
     DesignerCode: 

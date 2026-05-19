@@ -44,12 +44,14 @@ namespace ProjectSurvivor{
         }
 
         private void Update(){
-            var horizontal = Input.GetAxis("Horizontal");
-            var vertical = Input.GetAxis("Vertical");
+            var horizontal = Input.GetAxisRaw("Horizontal");
+            var vertical = Input.GetAxisRaw("Vertical");
             
-            var dir=new Vector2(horizontal,vertical).normalized;
-            
-            SelfRigidbody2D.velocity = dir*moveSpeed;
+            var targetVelocity = new Vector2(horizontal,vertical).normalized * moveSpeed;
+
+            // 平滑移动
+            SelfRigidbody2D.velocity =
+                Vector2.Lerp(SelfRigidbody2D.velocity, targetVelocity, 1 - Mathf.Exp(-Time.deltaTime * 5));
         }
 
         private void OnDestroy(){
