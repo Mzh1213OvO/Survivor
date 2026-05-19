@@ -31,6 +31,9 @@ MonoBehaviour:
     - TypeName: ProjectSurvivor.Bomb
       PathToRoot: Bomb
       MemberName: Bomb
+    - TypeName: ProjectSurvivor.GetAllExp
+      PathToRoot: GetAllExp
+      MemberName: GetAllExp
     ScriptsFolder: Assets/Scripts/Game
     ClassName: PowerUpManager
     Namespace: ProjectSurvivor
