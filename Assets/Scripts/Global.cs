@@ -77,7 +77,6 @@ namespace ProjectSurvivor{
 
         public static void GeneratePowerUp(GameObject gameObject){
             var percent = Random.Range(0, 1f);
-            
 
             //todo:血瓶掉落概率
             if (percent < 0.3f){
@@ -93,6 +92,7 @@ namespace ProjectSurvivor{
                 PowerUpManager.Instance.Exp.Instantiate()
                     .Position(gameObject.Position())
                     .Show();
+                return;
             }
 
             percent = Random.Range(0, 1f);
@@ -100,6 +100,24 @@ namespace ProjectSurvivor{
                 PowerUpManager.Instance.Coin.Instantiate()
                     .Position(gameObject.Position())
                     .Show();
+                return;
+            }
+
+            //todo:所有经验掉落概率
+            percent = Random.Range(0, 1f);
+            if (percent < 0.1f){
+                PowerUpManager.Instance.GetAllExp.Instantiate()
+                    .Position(gameObject.Position())
+                    .Show();
+                return;
+            }
+            
+            //todo:炸弹掉落概率
+            percent = Random.Range(0, 1f);
+            if (percent < 0.1f){
+                PowerUpManager.Instance.Bomb.Instantiate()
+                .Position(gameObject.Position())
+                .Show();
             }
 
         }

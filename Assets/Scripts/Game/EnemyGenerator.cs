@@ -32,10 +32,8 @@ namespace ProjectSurvivor{
             foreach (var enemyWave in enemyWaves){
                 _enemyWavesQueue.Enqueue(enemyWave);
             }
-
             currentWave = null;
         }
-
 
         private void Update(){
             // 波次为空，从队列中取出下一波

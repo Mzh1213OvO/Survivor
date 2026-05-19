@@ -11,6 +11,7 @@ namespace ProjectSurvivor{
 
                 if (enemy && enemy.gameObject.activeSelf){
                     enemy.Hurt(enemy.health);
+                    CameraController.Shake();
                 }
                 
             }
