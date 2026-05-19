@@ -20,6 +20,14 @@ namespace ProjectSurvivor{
                     CoinPercentUpgradeBtn.Hide();
                     ExpPercentUpgradeBtn.Hide();
                 }
+
+                if (coin >= 30){
+                    BtnPlayerMaxHpUpgrade.Show();
+                }
+                else{
+                    BtnPlayerMaxHpUpgrade.Hide();
+                }
+                
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             
             
@@ -42,6 +50,11 @@ namespace ProjectSurvivor{
                 
                 SceneManager.LoadScene("Game");
             });
+            
+            BtnPlayerMaxHpUpgrade.onClick.AddListener((() => {
+                Global.Coin.Value -= 30;
+                Global.MaxHp.Value += 1;
+            }));
             
             CloseButton.onClick.AddListener(() => {
                 CoinUpgradePanel.Hide();
