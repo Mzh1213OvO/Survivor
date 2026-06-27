@@ -30,6 +30,7 @@ namespace ProjectSurvivor{
             if (health <= 0){
                 //TODO: 经验值的掉落
                 Global.GeneratePowerUp(gameObject);
+                AudioKit.PlaySound("EnemyDie");
                 this.DestroyGameObjGracefully();
             }
         }
@@ -41,7 +42,7 @@ namespace ProjectSurvivor{
             Sprite.color = Color.red;
                         
             "敌人受伤".LogInfo();
-                        
+            AudioKit.PlaySound("Hit");
             ActionKit.Delay(0.2f,() => {
                 this.Sprite.color = Color.white;
                 this.health -= damageValue;

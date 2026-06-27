@@ -37,6 +37,7 @@ namespace ProjectSurvivor{
                 if (level > 1){
                     Time.timeScale = 0;
                     UpgradeButtons.Show();
+                    AudioKit.PlaySound("LevelUp");
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
             

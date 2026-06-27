@@ -31,9 +31,10 @@ namespace ProjectSurvivor{
                     if (hitBox.owner.CompareTag("Enemy")){
 
                         Global.Hp.Value--;
-
+                        AudioKit.PlaySound("Hurt");
                         if (Global.Hp.Value <= 0){
                             Time.timeScale = 0;
+                            AudioKit.PlaySound("Die");
                             this.DestroyGameObjGracefully();
                             UIKit.OpenPanel<UIGameOverPanel>();    
                         }
