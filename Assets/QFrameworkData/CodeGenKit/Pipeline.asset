@@ -18,9 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
+    BindInfos:
+    - TypeName: RectTransform
+      PathToRoot: FloatText
+      MemberName: FloatText
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: CameraController
+    ClassName: FloatTextController
     Namespace: ProjectSurvivor
     MainCode: 
     DesignerCode: 

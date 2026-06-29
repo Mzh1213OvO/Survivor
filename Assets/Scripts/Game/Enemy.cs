@@ -38,6 +38,8 @@ namespace ProjectSurvivor{
         private bool _isHurting = false;//防止第一次受伤还没生效就第二次受伤
         public void Hurt(float damageValue,bool bombDamage = false){
             if (_isHurting && !bombDamage) return;
+
+            FloatTextController.Play(transform.position + Vector3.up*1,damageValue.ToString());
             
             Sprite.color = Color.red;
                         
